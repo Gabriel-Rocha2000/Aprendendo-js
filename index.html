@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="description" content="Curso interativo de JavaScript com exemplos práticos e desafios"/>
+  <meta name="theme-color" content="#2c3e50" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Curso de JavaScript - Aprenda Programação Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button class="theme-toggle" aria-label="Alternar tema" title="Alternar entre tema claro e escuro">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <div class="container">
+    <header>
+      <h1>Fundamentos do JavaScript</h1>
+      <p class="subtitle">Aprenda JavaScript de forma prática e interativa</p>
+      <div class="progress-container">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p class="progress-text">Progresso: <span id="progress-percentage">0%</span></p>
+      </div>
+    </header>
+    
+    <nav aria-label="Navegação das lições">
+      <div id="lesson-buttons" role="tablist"></div>
+    </nav>
+
+    <main>
+      <div id="lesson-content" role="tabpanel">
+        <h2 id="lesson-title"></h2>
+        <section aria-labelledby="lesson-title">
+          <div class="lesson-header">
+            <div class="tooltip">
+              <i class="fas fa-info-circle" aria-hidden="true"></i>
+              <span class="tooltip-text">Clique no ícone de ajuda para dicas adicionais</span>
+            </div>
+          </div>
+          
+          <p id="lesson-theory"></p>
+          
+          <div class="code-section">
+            <h3><i class="fas fa-code" aria-hidden="true"></i> Exemplo:</h3>
+            <pre id="lesson-example" aria-label="Exemplo de código"></pre>
+          </div>
+          
+          <div class="exercise-section">
+            <h3><i class="fas fa-tasks" aria-hidden="true"></i> Exercício:</h3>
+            <p id="lesson-exercise"></p>
+          </div>
+          
+          <div class="code-editor">
+            <label for="code-input"><i class="fas fa-edit" aria-hidden="true"></i> Seu código:</label>
+            <textarea 
+              id="code-input" 
+              placeholder="Escreva seu código aqui..."
+              aria-label="Editor de código"
+              spellcheck="false"
+              autocapitalize="off"
+              autocomplete="off"
+            ></textarea>
+            <button onclick="runCode()" aria-label="Executar código">
+              <i class="fas fa-play" aria-hidden="true"></i> Executar Código
+            </button>
+          </div>
+          
+          <div class="output-section">
+            <h3><i class="fas fa-terminal" aria-hidden="true"></i> Resultado:</h3>
+            <pre id="output" aria-live="polite"></pre>
+          </div>
+
+          <div class="challenge-section">
+            <h3><i class="fas fa-trophy" aria-hidden="true"></i> Desafio:</h3>
+            <p id="lesson-challenge"></p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2024 Curso de JavaScript - Todos os direitos reservados</p>
+      <div class="social-links">
+        <a href="https://github.com/Gabriel-Rocha2000/Gabriel-Rocha2000" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/gabriel-g-rocha/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
